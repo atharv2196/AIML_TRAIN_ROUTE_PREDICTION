@@ -1,0 +1,9 @@
+pandas
+scikit-learn==1.8.0
+xgboost==3.4.1
+matplotlib
+seaborn
+joblib
+networkx
+streamlit==1.65.0
+plotly==7.1.0

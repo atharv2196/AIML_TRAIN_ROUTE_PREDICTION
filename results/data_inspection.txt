@@ -1,0 +1,12 @@
+Dataset: ir_train.csv
+Rows: 1,500,000
+Columns (45): journey_id, train_number, train_type, departure_date, year, month, day_of_week, departure_hour, is_weekend, is_night_departure, is_peak_hour, is_festival_season, season, zone, zone_abbr, source_station_category, destination_station_category, distance_km, num_scheduled_stops, scheduled_travel_hours, track_doubled, is_hdn_route, traction_type, is_electrified, psr_count, is_circular_route, is_monsoon_season, is_fog_risk, fog_risk_score, zone_fog_index, zone_congestion_index, season_severity_score, loco_age_years, coach_age_years, has_lhb_coaches, is_rake_shared, maintenance_score, seat_utilisation_pct, is_overloaded, late_incoming_rake, is_special_train, route_historical_ontime_pct, primary_delay_cause, delay_minutes, is_delayed
+Duplicate rows: 0
+Target counts: {'1': 1078329, '0': 421671}
+Missing values: none
+
+stations.json: object, keys=['type', 'features'], features=8,990
+
+trains.json: object, keys=['type', 'features'], features=5,208
+
+schedules.json: list, records=417,080

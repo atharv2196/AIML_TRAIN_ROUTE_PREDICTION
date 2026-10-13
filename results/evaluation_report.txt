@@ -1,0 +1,56 @@
+MODEL COMPARISON
+
+              model  accuracy  precision   recall       f1  balanced_accuracy  roc_auc  training_time_seconds  prediction_time_seconds
+Logistic Regression   0.83550   0.937451 0.826856 0.878687           0.842319 0.919422               0.254128                 0.013547
+      Random Forest   0.83950   0.862694 0.924358 0.892462           0.772555 0.901579               1.020321                 0.073046
+            XGBoost   0.84475   0.921357 0.857738 0.888410           0.834504 0.911803               1.090134                 0.026095
+
+
+
+BEST MODEL BY F1: Random Forest (0.8925)
+
+
+
+CONFUSION MATRICES
+
+Logistic Regression
+[[ 959  159]
+ [ 499 2383]]
+
+              precision    recall  f1-score   support
+
+           0       0.66      0.86      0.74      1118
+           1       0.94      0.83      0.88      2882
+
+    accuracy                           0.84      4000
+   macro avg       0.80      0.84      0.81      4000
+weighted avg       0.86      0.84      0.84      4000
+
+
+Random Forest
+[[ 694  424]
+ [ 218 2664]]
+
+              precision    recall  f1-score   support
+
+           0       0.76      0.62      0.68      1118
+           1       0.86      0.92      0.89      2882
+
+    accuracy                           0.84      4000
+   macro avg       0.81      0.77      0.79      4000
+weighted avg       0.83      0.84      0.83      4000
+
+
+XGBoost
+[[ 907  211]
+ [ 410 2472]]
+
+              precision    recall  f1-score   support
+
+           0       0.69      0.81      0.74      1118
+           1       0.92      0.86      0.89      2882
+
+    accuracy                           0.84      4000
+   macro avg       0.81      0.83      0.82      4000
+weighted avg       0.86      0.84      0.85      4000
+

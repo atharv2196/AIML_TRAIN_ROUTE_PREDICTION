@@ -1,0 +1,3 @@
+normal_operation: PROCEED - Route is available and safety checks passed
+congestion_alternative_route: REROUTE - Initial route rejected; safe alternative selected (Delhi, Jaipur, Ahmedabad, Mumbai)
+red_signal_safety_event: REROUTE - Initial route rejected; safe alternative selected (Delhi, Jaipur, Ahmedabad, Mumbai)

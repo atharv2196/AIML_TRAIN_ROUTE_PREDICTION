@@ -1,0 +1,23 @@
+RAILWAY MODEL AUDIT
+Rows audited: 20,000
+Date range: 2018-01-01 00:00:00 to 2024-12-30 00:00:00
+Saved metrics verification maximum difference: 0.000000000000
+Saved metrics match: True
+
+ORIGINAL EXPERIMENT
+Stratified random 80/20 split; leakage columns excluded by the existing pipeline.
+
+OPERATIONAL FEATURE REVIEW
+- route_historical_ontime_pct: historical aggregate; valid only if calculated before this journey
+- late_incoming_rake: near-real-time operational information; may be unavailable at planning time
+- zone_congestion_index: operational congestion signal; timing and calculation need confirmation
+- maintenance_score: pre-departure operational information; confirm availability at prediction time
+These fields are not proven leakage, but the improved experiment excludes them unless their availability before prediction is documented.
+
+IMPROVED EXPERIMENT
+Chronological 80/20 split after sorting by departure_date; target-revealing and operational-risk columns excluded.
+            experiment                   model  accuracy  balanced_accuracy  precision   recall       f1  roc_auc
+chronological_improved Majority Class Baseline   0.72225           0.500000   0.722250 1.000000 0.838728 0.500000
+chronological_improved     Logistic Regression   0.79200           0.793686   0.910251 0.789893 0.845812 0.877038
+chronological_improved           Random Forest   0.79450           0.695429   0.819080 0.918311 0.865862 0.854233
+chronological_improved                 XGBoost   0.79550           0.770351   0.882527 0.826930 0.853824 0.866465
