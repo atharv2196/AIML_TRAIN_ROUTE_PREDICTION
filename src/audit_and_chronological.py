@@ -29,7 +29,7 @@ OPERATIONAL_RISK_COLUMNS = {
 
 
 def make_preprocessor(frame: pd.DataFrame) -> ColumnTransformer:
-    categorical = frame.select_dtypes(include=["str", "object", "category"]).columns.tolist()
+    categorical = frame.select_dtypes(include=["object", "category"]).columns.tolist()
     numeric = [column for column in frame.columns if column not in categorical]
     return ColumnTransformer(
         [
